@@ -11,15 +11,34 @@
 #                     return [i, j]
 #         return[]
     
-class Solution(object):
-    def twoSum(self, nums, target):
-        hash = {}
-        for i, num in enumerate(nums):
-            comp = target - num
+# class Solution(object):
+#     def twoSum(self, nums, target):
+#         hash = {}
+#         for i, num in enumerate(nums):
+#             comp = target - num
 
-            if comp in hash:
-                return [hash[comp], i]
+#             if comp in hash:
+#                 return [hash[comp], i]
         
-            hash[num] = i
+#             hash[num] = i
         
-        return[]
+#         return[]
+
+def find_pair(nums, target):
+    seen = set()
+    
+    for num in nums:
+        complement = target - num
+        
+        if complement in seen:
+            return [num, complement]
+
+        seen.add(num)
+
+    return None
+
+
+print(find_pair([10, 15, 3, 7], 17))
+print(find_pair([1, 2, 3, 4], 8))
+print(find_pair([5, 1, 6, 2, 4], 10))
+print(find_pair([2, 8, 12, 7], 20))
