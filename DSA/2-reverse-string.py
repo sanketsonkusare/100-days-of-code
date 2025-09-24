@@ -11,10 +11,13 @@ class Solution(object):
         #     s[i] = a[length-1-i]
 
         """approach 2"""
-        left = 0
-        right = len(s) - 1
+        # left = 0
+        # right = len(s) - 1
         
-        while left < right:
-            s[left], s[right] = s[right], s[left]
-            left += 1
-            right -= 1
+        # while left < right:
+        #     s[left], s[right] = s[right], s[left]
+        #     left += 1
+        #     right -= 1
+        
+        """approach 3"""
+        s[:] = s[::-1]
