@@ -5,9 +5,11 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        sorted_s = sorted(s)
-        sorted_t = sorted(t)
-        if sorted_s == sorted_t:
-            return True
-        else:
-            return False
+        # sorted_s = sorted(s)
+        # sorted_t = sorted(t)
+        # if sorted_s == sorted_t:
+        #     return True
+        # else:
+        #     return False
+
+        return sorted(s) == sorted(t)
