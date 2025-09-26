@@ -17,7 +17,7 @@ class Solution(object):
 
 
         # more efficient solution coz it checks for all the false case first that is much faster then it searches wather there exists another false case or not if not then it returns true
-        
+
         if len(s)!=len(t):
             return False
         for index in set(s):
